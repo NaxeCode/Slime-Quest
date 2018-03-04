@@ -1,0 +1,9 @@
+The things that need to be done:
+
+Implement Tiled Editor [x]
+Work out a basic workflow w/ Mongo [x]
+Teach Mongo Tiled [ ]
+Implement Slimes [ ]
+Implement Shooting [x]
+remove crouching [x]
+decrease dragX in midair [x]
