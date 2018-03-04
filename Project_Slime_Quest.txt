@@ -1,0 +1,292 @@
+Change the font of this to Fixedsys BOLD pt 20. This is the font I want the game to have
+
+I have no idea how to work the Final Boss into the game yet, so it's weird and bad right now : try to ignore any mentions of the "King Slime" for now
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Titles:
+*Slime Quest
+*Slime Hunt
+*Slime Safari
+*Soul Snatcher
+*Scalene and the Slime Safari
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Gameplay : (Heavily inspired by Cave Story since it has a gun with similar projectile physics and gameplay in general : think of the Polestar from cavestory for how I invision the gun gameplay to be like)
+
+CONTROLS : (there should be both keyboard and controller support. Keys MAY NOT be rebound through the OPTIONS in the final game)
+
+How the player will control (keyboard)
+-My vision of the controls align a lot with how cave story handles their controls
+*arrow keys (right and left) : for movement right and left
+*arrow key (up) : the player will look up and aim their gun directly up : MAYBE also move camera up (maybe not though, we'll see how well it fits)
+*arrow key (down) : the player will duck and their gun will aim lower horizontally
+*Z : jumping and confirming
+*X : shooting and cancel
+*ESC : PAUSE menu
+*Q : COLLECTION menu
+
+How the player will control (controller)
+*control stick (X Axis + and -) : for movement right and left
+*control stick (Y Axis +) : the player will look up and aim their gun directly up : MAYBE also move camera up (maybe not though, we'll see how well it fits)
+*control stick (Y Axis -) : the player will duck and their gun will aim lower horizontally
+*button 0 (or "A" on Xbox controller) : jumping and confirming
+*button 2 and button 1 ("X" and "B" on Xbox controller) : shooting and cancel
+*Button 8 ("START" on Xbox Controller) : PAUSE menu
+*Button 9 and Button 3 ("BACK" and "Y" on Xbox controller) : COLLECTION menu
+
+
+System : MENUS
+
+*PAUSE MENU
+-accessed by the buttons listed above
+-has the options for : 
+-COLLECTION : lists all SLIME SOULS found and how much you have : lists current money : Possibly have a counter of how many slimes are left in the specific "room" you are in
+-OPTIONS : brings up a list of options which are : Fullscreen / Windowed : Sound sliders (volume and sound fx)
+-QUIT : brings up a promt that says "are you sure? Yes / No" : if you press "Yes" the game closes itself : if you press "No" the promt closes and you are on the normal PAUSE MENU 
+
+*SHOP MENU
+-accessed by pressing the confirm button in front of the SHOP
+-brings up a window with the shop keeper(Lotte)'s portrait and some options
+-has the options for : 
+-BUY : brings up a prompt which lists various upgrades and prices
+-SELL : brings up a prompt which lists your COLLECTION : has the heart on the left, and the price for each on the right (better shown visually)
+~TALK(might be scrapped in favor for dialougue playing after certain ammounts of slimes have been sold, and directly after the sale) : would play dialougue : dialougue played is dependant on how many SLIME SOULS the player has sold
+-SAVE : saves current progress (see System : SAVING below)
+-FINAL : hidden option that is only revealed to the player after they have sold 100(number subject to change) SLIME SOULS : plays a cutscene (undecided right now) where Scalene is somehow teleported to a room that is right next to the room you fight the King Slime in (this is bad right now, because I intend to expand upon this later)
+-LEAVE : closes shop menu
+
+System : SAVING
+
+*This data will be saved : 
+-SLIME SOULS collected : Which slimes are alive / dead : What slime souls + how many the player has : money : upgrades purchased : HP : How many SLIME SOULS the player has sold (in general, not by type) : If Lotte's house is locked : If the "FINAL" SHOP MENU option is unlocked
+*Saving will be done by talking to the shop keeper (Lotte) and choosing the SAVE option
+
+
+System : GAMEPLAY :
+
+*Player (Scalene)
+
+*Actions : (keybinds listed under CONTROLS)
+-moving (right and left) : a walking animation will play, and be flipped depending on the direction pushed : footsteps will play depending on which frame the animation is in (after each "step")
+-looking up : will point gun upward and MAYBE move camera up : you may not shoot upwards while jumping
+-ducking : player crouches and gun is lowered : a crouching animation will be played and the gun will be physically lower : hitbox on Y Axis is shorter
+-jumping : player moves upward and falls back down : jump height can be controlled by how long the jump button is pressed : will not jump a second time unless the button is released and pressed again : will play a jumping animation and a (quiet) sound effect : when the player lands, a small smoke cloud instance appears and disappears and a landing sound effect is played
+-shooting : player creates and instance of a bullet that moves forward and destroys itself after it's animation has played fully : this bullet does a set ammount of damage to slimes it hits once per bullet : bullet it shot depending in a certain direction depending on the state / positioning of the player (neutral = R or L from middle of player, crouching = R or L from lower part of player, looking up = upwards from middle of player) 
+
+*Planned interactions with environment
+-walking into walls stops the walking animation and the player
+-pressing the confirm button in front of the shop keeper brings up the SHOP MENU
+-jumping on top of slimes makes you bounce off and sound effect plays : some slimes react when hopped on by playing an animation
+-touching a slime fron any side except for the top takes away some HP and plays a sound effect
+
+*ENEMIES :
+-all slimes are toxic to Scalene, therefore if they touch her she loses HP
+-the players bullet does 1(+upgrades) damage to all slimes per bullet 
+-each slime disappears from the world forever when killed
+
+*Sleepy Slime : GREEN
+-wants to sleep
+-it's hitbox is shorter than other slimes and requires the player the crouch and shoot
+
+*Sheepy Slime : LIGHTBLUE
+-wants to be alone...
+-moves around randomly, and if the player gets within a certain radius of it - it hops away
+
+*Kissy Slime : YELLOW
+-wants to poke the player
+-moves around randomly, and if the player gets within a certain radius of it - it hops toward the player
+
+*Spooky Slime : PURPLE
+-wants to bite the player
+-moves around randomly, and if the player gets within a certain (largish) radius - it hops quickly toward the player
+
+*Flappy Slime : PINK
+-wants to fly
+-moves in a set pattern in the air
+
+*Slinky Slime : DARK BLUE
+-wants to spit at the player
+-moves back and forth until the player is within a certain radius
+~when the player is in the radius the slime shoots a lobbed projectile at the player either right or left depending on where the player is : like a hammer bro from super mario
+
+*King Slime : ROYAL
+-Final Boss
+-You can only fight him after you have sold every single other SLIME SOUL in the game
+-will decide what the fight will be like at a later date
+
+
+*SLIME SOULS : (dropped by slimes upon death)
+-effected by gravity : falls to ground when spawned until it hits the floor
+-different sell values depending on type MAYBE
+-can be traded for money
+*GREEN
+*LIGHTBLUE
+*YELLOW
+*PURPLE
+*PINK
+*DARKBLUE
+*ROYAL
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Story:
+
+Main Area :
+*A small barn-like house : if the player presses the confirm button in front of this little house it brings up a dialogue box that says "Locked"
+-the house gets unlocked later in the game - if the player chooses a certain dialougue option shown below at "80 souls sold"
+*A Shop with the shop keeper(Lotte) at the counter of the shop
+
+Characters :
+
+*Scalene
+-short and fat lizard
+-no outstanding personality : silent protagonist
+-no dialougue except for possible text promts and implied reactions
+-is exploring this slime world just for fun
+
+*Lotte
+-short unicorn who runs the upgrade shop
+-possible personality : seems introverted but opens up as the game goes on : similar to Sable from Animal Crossing
+-inventor / mechanic : she invents what the player's upgrades are : creates mechanical things for fun
+-she buys SLIME SOULS to power a mechanical horse robot she is making : this info will be revealed late into the game
+-she stands on a stool behind the counter of the shop because she is short
+
+
+Slimes: 
+There could possibly be a slime encyclopedia, and some of the descriptions in here can be placed into it
+
+*Sleepy Slime
+-likes to sleep
+-never wakes up until it dies : opens it eyes upon death
+
+*Sheepy Slime
+-shy
+-cries upon death
+
+*Kissy Slime
+-infatuated with the Scalene
+-opens eyes and flower falls off upon death
+
+*Spooky Slime
+-anger issues
+-wants nothing more than to bite someone... and that person is - you!
+
+*Flappy Slime
+-no personality
+-no eyes
+-just flies
+
+*Slinky Slime
+-wants to show affection for it's new friend Scalene by spitting at her
+-they are not aware this strange tradition actually hurts non-slimes
+
+*King Slime
+-calm, and professional
+-wants nothing more than to lead it's kind into a better tomorrow...  what's left of them.
+
+
+
+*SHOP DIALOGUE : (after a certain ammount are sold)
+-Dialogue will only be shown after a certain SLIME SOUL milestone is reached after selling : if it isn't reached no dialogue will play at all after selling
+-Numbers of souls required to see certain dialogue are subject to change
+
+*First time walking past shop (no TALK needed) : forced dialougue box appears : shop menu opens
+-(Scalene summons a "!" above her head and turns to face the shop owner : shop menu is forced open)
+-Woah - I'm not used to visitors
+-My name is Lotte, welcome to my shop!
+-If you find something you like, please feel free to buy it.
+-...Hmm. Seems like your short on funds.
+-...
+-... (I have an idea!)
+-Do you want to do me a favor? I'll pay you
+-PROMPT : "Yes / Bye"
+"Bye" : -.... : shop menu closes
+"Yes" : -I think that weird gun your holding can help out both of us.
+-If you see a SLIME, you could probably fight it with that gun and get their SLIME SOUL
+-I'll pay you for any SLIME SOULs you bring to this shop
+-...
+-...(they sure don't talk much do they.)
+-Um. Goodbye : shop window closes
+
+*0 souls sold and player presses the confirm button in front of the shop
+-How's your slime hunting going?
+-...
+-Hmm. I see
+
+*1 soul sold
+-Thanks for the SLIME SOUL
+-It'll help a lot.
+-It'll help even more if you sell me another.
+-...
+
+*2 souls sold
+-You sure did find a couple slimes
+-Literally
+-A couple.
+-...
+
+*5 souls sold
+-Woah
+-If you keep this up, I might go bankrupt- haha
+
+*20 souls sold
+-Goodjob on the slimes so far, I'll give you a tip
+-You probabaly noticed already, but there's a finite ammount of slimes
+-Make sure you're thorough, or else cleaning up the rest might get a bit tricky
+
+*30 souls sold
+-You sure are good at kill-
+-...
+-uh. Slime. Hunting...?
+
+*40 souls sold
+-Sorry if it seemed a bit weird earlier with the whole "kill" thing.
+-Slimes are technically not "living", so you can't really "kill" them.
+-I think.
+
+*60 souls sold
+-It sure is a lot quieter around here.
+-... 
+-Goodluck with your slime hunting.
+
+*80 souls sold [mini cutscene]
+-We've known eachother for quite a while now
+-You seem pretty trustworthy, so
+-Do you want to know what I've been using these SLIME SOULs for?
+-PROMPT "I'm curious / Don't care, never will"
+-"Don't care, never will" : -.... : closes dialogue box, but not shop
+-"I'm curious" : -I almost thought you'd say no. Hold on a minute- : the shop window closes and she steps down from the stool she's on and only the top of her head is visible
+-She walks out the side of the building (through a door) and walks over to her house which is next to the shop
+-Peek your head through the door : Scalene walks over (scripted) : Screen fades out and fades back in with a picture of whats inside Lotte's house
+-when the player pressed the confirm button again it fades back to the outside of the house with both Scalene and Lotte outside again : Lotte runs back inside the shop and stands back up on her stool
+-the player can move again : you now have access to viewing the inside of Lotte's house any time you want
+
+*99 souls sold
+-You've been working very hard.
+-If you don't mind me asking, why did you come here in the first place?
+-PROMPT "Because I was bored / Well, it sure wasn't to talk to you."
+-"Well, it sure wasn't to talk to you." : -.... : dialogue box closes but not the shop menu
+-"Because I was bored" : -Really?
+-I was expecting something more complex, but
+-I hope my "favor" helped with your boredom a bit.
+-Speaking of that favor
+-I've been keeping track of the places you have gone and it seems like you found almost every SLIME SOUL
+-If I'm correct you only have one left for me to buy
+-We might have to say goodbye soon...
+
+*100 souls sold (NOTE TO SELF : REWRITE THIS IT'S BAD)
+-You did it
+-You found every single SLIME SOUL on this entire planet-
+-Well - almost every single one
+-The only one left is the SLIME SOUL of "King Slime"
+-If you're ready to fight him, and take his SLIME SOUL just let me know : the dialogue box closes and the option for "FINAL" appears on the SHOP MENU
+
+*101 souls sold
+-!!
+-fuck I'll write this later, I ran out of creative energy like an hour ago
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Details With the Design:
+
+DIALOGUE
+*IMPORTANT : The font for all dialogue text should be Fixedsys BOLD (pt of 20 possibly)
+*Dialogue text should be played in a type writer format : a sound effect is played for each character displayed, and each character is displayed one letter at a time very quickly : like in most RPG's
+
