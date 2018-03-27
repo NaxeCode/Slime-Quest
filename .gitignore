@@ -1,8 +1,1 @@
-export/flash/haxe/ApplicationMain.hx
-export/flash/bin/Slime Quest.swf
-export/.build
-export/flash/haxe/release.hxml
-export/flash/haxe/final.hxml
-export/flash/haxe/DefaultAssetLibrary.hx
-export/flash/haxe/NMEPreloader.hx
-export/flash/haxe/debug.hxml
+export/
