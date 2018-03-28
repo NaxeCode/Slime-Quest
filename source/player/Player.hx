@@ -7,7 +7,7 @@ import flixel.FlxState;
 import flixel.util.FlxColor;
 import flixel.math.FlxVelocity;
 import flixel.util.FlxTimer;
-import djFlixel.Controls;
+//import djFlixel.Controls;
 import flixel.input.gamepad.FlxGamepadInputID;
 import flixel.input.gamepad.FlxGamepad;
 import player.*;

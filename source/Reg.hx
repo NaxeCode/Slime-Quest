@@ -14,7 +14,7 @@ package;
 import flixel.FlxG;
 import flixel.FlxObject;
 import flixel.util.FlxSave;
-import djFlixel.gapi.ApiEmpty;
+//import djFlixel.gapi.ApiEmpty;
 import flixel.input.gamepad.FlxGamepadInputID;
 import flixel.input.gamepad.FlxGamepad;
 import flixel.input.keyboard.FlxKey;
@@ -119,6 +119,6 @@ class Reg
 	#elseif NEWGROUNDS
 		// public static var api:ApiNewgrounds = new ApiNewgrounds();
 	#else
-		public static var api:ApiEmpty = new ApiEmpty();
+		//public static var api:ApiEmpty = new ApiEmpty();
 	#end
 }
