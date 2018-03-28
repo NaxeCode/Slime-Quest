@@ -76,8 +76,6 @@ class Player extends FlxSprite
 
 		setFacingFlip(FlxObject.LEFT, true, false);
 		setFacingFlip(FlxObject.RIGHT, false, false);
-
-		this.setColorTransform(0, 1, 1);
     }
 
 	private function initAnimation():Void
