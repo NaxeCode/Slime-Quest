@@ -179,7 +179,7 @@ class ApplicationMain {
 		
 		config = {
 			
-			build: "563",
+			build: "560",
 			company: "HaxeFlixel",
 			file: "Slime Quest",
 			fps: 60,
