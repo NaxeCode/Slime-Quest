@@ -56,8 +56,6 @@ class BlueSlime extends BaseEnemy
         if (_enemyActive)
             animateAI(elapsed);
         
-        animateGraphics();
-        
         super.update(elapsed);
     }
 
@@ -74,9 +72,11 @@ class BlueSlime extends BaseEnemy
         if (jumpAutoTick <= timing)
 			jumpAutoTick += elapsed;
         
+        animateGraphics(timing);
+
         if (jumpAutoTick > timing)
 		{
-            switch (FlxG.random.bool(50))
+            switch (FlxG.random.bool(40))
             {
                 case true: facing = FlxObject.LEFT;
                 case false: facing = FlxObject.RIGHT;
@@ -85,19 +85,19 @@ class BlueSlime extends BaseEnemy
             velocity.y = -_jumpPower;
             switch (facing)
             {
-                case FlxObject.LEFT: velocity.x = -(_jumpPower / 2);
-                case FlxObject.RIGHT: velocity.x = (_jumpPower / 2);
+                case FlxObject.LEFT: velocity.x = -(_jumpPower / 2.5);
+                case FlxObject.RIGHT: velocity.x = (_jumpPower / 2.5);
             }
 
 			jumpAutoTick = 0;
 		}
     }
 
-    private function animateGraphics():Void
+    private function animateGraphics(timing:Float = 1):Void
     {
-        if (isTouching(FlxObject.FLOOR))
-            animation.play("idle");
-        if (y != 0)
+        if (jumpAutoTick > (timing - 0.45))
             animation.play("hop_loop");
+        else
+            animation.play("idle");
     }
 }
