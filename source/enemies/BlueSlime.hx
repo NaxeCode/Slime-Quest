@@ -82,11 +82,11 @@ class BlueSlime extends BaseEnemy
                 case false: facing = FlxObject.RIGHT;
             }
 
-            velocity.y = -_jumpPower;
+            velocity.y = -(_jumpPower / 1.1);
             switch (facing)
             {
-                case FlxObject.LEFT: velocity.x = -(_jumpPower / 2.5);
-                case FlxObject.RIGHT: velocity.x = (_jumpPower / 2.5);
+                case FlxObject.LEFT: velocity.x = -(_jumpPower / 2.7);
+                case FlxObject.RIGHT: velocity.x = (_jumpPower / 2.7);
             }
 
 			jumpAutoTick = 0;
@@ -95,7 +95,7 @@ class BlueSlime extends BaseEnemy
 
     private function animateGraphics(timing:Float = 1):Void
     {
-        if (jumpAutoTick > (timing - 0.45))
+        if (jumpAutoTick > (timing - 0.50))
             animation.play("hop_loop");
         else
             animation.play("idle");
