@@ -12,6 +12,13 @@ import flixel.input.gamepad.FlxGamepadInputID;
 import flixel.input.gamepad.FlxGamepad;
 import player.*;
 
+/**
+ *  Todo:
+ *  * Vertical speed in mid air equal to ground (to avoid player's hopping to move across the map faster)
+ *  Known bugs:
+ *  * FALL_LOOP frameindex bug (Play's the wrong frames)
+ */
+
 enum Animations
 {
 	IDLE;
