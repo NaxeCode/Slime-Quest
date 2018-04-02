@@ -19,7 +19,6 @@ class PrototypeLvl extends BaseLevel
 
 		initPlayer();
 		initEnemyGroup();
-		initTiledLevel(AssetPaths.prototypeLvl__tmx, this);
 		//initUI();
 	}
 
