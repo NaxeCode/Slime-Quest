@@ -75,7 +75,8 @@ class PrototypeLvl extends BaseLevel
 
 	override public function handleCollisions():Void
 	{
-		level.collideWithLevel(enemyGroup);
+		if (enemyGroup != null)
+			level.collideWithLevel(enemyGroup);
 		FlxG.overlap(enemyGroup, Reg.player, handleEnemyInteraction);
 		FlxG.overlap(enemyGroup, Reg.player.gun, handleEnemyShot);
 		level.collideWithLevel(Reg.player);
