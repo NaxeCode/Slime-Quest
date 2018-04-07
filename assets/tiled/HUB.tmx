@@ -10,7 +10,9 @@
   <image source="fgTiles.png" width="32" height="16"/>
  </tileset>
  <tileset firstgid="18" source="bgTiles.tsx"/>
- <tileset firstgid="18" source="PlainTiles.tsx"/>
+ <tileset firstgid="18" name="PlainTiles" tilewidth="16" tileheight="16" tilecount="60" columns="10">
+  <image source="plains tileset.png" width="160" height="96"/>
+ </tileset>
  <objectgroup name="images"/>
  <layer name="Background" width="77" height="72">
   <properties>

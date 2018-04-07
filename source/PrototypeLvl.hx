@@ -19,7 +19,7 @@ class PrototypeLvl extends BaseLevel
 
 		initPlayer();
 		initEnemyGroup();
-		initTiledLevel(AssetPaths.eLvl__tmx, this);
+		initTiledLevel(AssetPaths.HUB__tmx, this);
 		//initUI();
 	}
 
@@ -75,8 +75,7 @@ class PrototypeLvl extends BaseLevel
 
 	override public function handleCollisions():Void
 	{
-		if (enemyGroup != null)
-			level.collideWithLevel(enemyGroup);
+		level.collideWithLevel(enemyGroup);
 		FlxG.overlap(enemyGroup, Reg.player, handleEnemyInteraction);
 		FlxG.overlap(enemyGroup, Reg.player.gun, handleEnemyShot);
 		level.collideWithLevel(Reg.player);
