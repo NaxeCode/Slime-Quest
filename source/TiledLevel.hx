@@ -27,7 +27,7 @@ class TiledLevel extends TiledMap
 {
 	// For each "Tile Layer" in the map, you must define a "tileset" property which contains the name of a tile sheet image 
 	// used to draw tiles in that layer (without file extension). The image file must be located in the directory specified bellow.
-	private static var c_PATH_LEVEL_TILESHEETS = "assets/tiled/";
+	private inline static var c_PATH_LEVEL_TILESHEETS = "assets/tiled/";
 	
 	// Array of tilemaps used for collision
 	public var foregroundTiles:FlxGroup;
@@ -38,11 +38,9 @@ class TiledLevel extends TiledMap
 	// Sprites of images layers
 	public var imagesLayer:FlxGroup;
 	
-	public function new(tiledLevel:String, directory:Dynamic, state:BaseLevel)
+	public function new(tiledLevel:String, state:BaseLevel)
 	{
 		super(tiledLevel);
-
-		c_PATH_LEVEL_TILESHEETS += directory;
 		
 		imagesLayer = new FlxGroup();
 		foregroundTiles = new FlxGroup();
