@@ -39,6 +39,8 @@ class PrototypeLvl extends BaseLevel
 
 	private function initTiledLevel(levelPath:String, folderName:String, state:BaseLevel):Void
 	{
+		folderName += "/";
+		
 		level = new TiledLevel(levelPath, folderName, state);
 
 		// Add backgrounds
