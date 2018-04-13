@@ -115,17 +115,8 @@ class TiledLevel extends TiledMap
 			{
 				foregroundTiles.add(tilemap);
 			}
-			else if (tileLayer.properties.contains("collideDirection"))
+			else if (tileLayer.properties.contains("collide"))
 			{
-				switch (tileLayer.properties.get("collideDirection"))
-				{
-					case "UP": tilemap.allowCollisions = FlxObject.UP;
-					case "DOWN": tilemap.allowCollisions = FlxObject.DOWN;
-					case "LEFT": tilemap.allowCollisions = FlxObject.LEFT;
-					case "RIGHT": tilemap.allowCollisions = FlxObject.RIGHT;
-					default: tilemap.allowCollisions = FlxObject.ANY;
-				}
-
 				if (collidableTileLayers == null)
 					collidableTileLayers = new Array<FlxTilemap>();
 				
