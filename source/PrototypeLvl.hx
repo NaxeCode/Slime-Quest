@@ -19,7 +19,7 @@ class PrototypeLvl extends BaseLevel
 
 		initPlayer();
 		initEnemyGroup();
-		initTiledLevel(AssetPaths.HUB__tmx, this);
+		initTiledLevel(AssetPaths.HUB__tmx, "Hub", this);
 		//initUI();
 	}
 
@@ -31,20 +31,15 @@ class PrototypeLvl extends BaseLevel
 		FlxG.camera.antialiasing = false;
 	}
 
-	override public function initJSON():Void
-	{
-		
-	}
-
 	private function initPlayer():Void
 	{
 		Reg.player = new Player(0, 0, this);
 		FlxG.camera.follow(Reg.player, PLATFORMER, 0.2);
 	}
 
-	private function initTiledLevel(levelPath:String, state:BaseLevel):Void
+	private function initTiledLevel(levelPath:String, folderName:String, state:BaseLevel):Void
 	{
-		level = new TiledLevel(levelPath, state);
+		level = new TiledLevel(levelPath, folderName, state);
 
 		// Add backgrounds
 		add(level.backgroundLayer);
