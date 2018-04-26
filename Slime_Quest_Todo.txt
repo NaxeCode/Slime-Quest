@@ -1,12 +1,21 @@
-The things that need to be done:
+The things that need to be done for next milestone to reach v0.5.0 and merged into main:
 
+
+CODE(Naxe) ---
 Figure out how to LINK multiple maps together seamlessly (no loading times preferably) [ ]
-Down+Jump should have you go through the one-way platform you're currently on [ ]
-Fix Scalene's broken animations [ ]
+Implement Down+Jump to go through one-way platforms you're currently on [ ]
 Implement Tiled Editor levels [x]
-Work out a basic workflow w/ Mongo [x]
-Teach Mongo Tiled [x]
 Implement basic Slimes [x]
 Implement Shooting [x]
 remove crouching [x]
 decrease dragX in midair [x]
+
+ART(Mongo) ---
+Finish placing HUB tiles in TiledEditor, test the change, and commit [ ]
+
+COLLAB(Both) ---
+Work with Mongo to fix Scalene's broken animation system [ ]
+Figure out what we should do with the Blue Slime enemy [ ]
+Work with MongoSnow to design the cave enterence (and the inside of the cave) (We'll worry about the bit connecting the cave to the HUB later, it'll prob include the shopkeeper / NPC's or something) [ ]
+Work out a basic workflow w/ MongoSnow [x]
+Teach Mongo Tiled [x]
