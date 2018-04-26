@@ -1,9 +1,12 @@
 The things that need to be done:
 
-Implement Tiled Editor [x]
+Figure out how to LINK multiple maps together seamlessly (no loading times preferably) [ ]
+Down+Jump should have you go through the one-way platform you're currently on [ ]
+Fix Scalene's broken animations [ ]
+Implement Tiled Editor levels [x]
 Work out a basic workflow w/ Mongo [x]
-Teach Mongo Tiled [ ]
-Implement Slimes [ ]
+Teach Mongo Tiled [x]
+Implement basic Slimes [x]
 Implement Shooting [x]
 remove crouching [x]
 decrease dragX in midair [x]
